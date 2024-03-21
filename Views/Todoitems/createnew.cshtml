@@ -1,0 +1,23 @@
+﻿
+
+<h1> welcome.@ViewData["user"]</h1>
+
+
+<form id="myForm" method="get" action="/Todoitems/savenew">
+    <div class="form-group">
+        <label for="exampleInputName">  Title</label>
+        <input type="text" class="form-control" id="exampleInputName" name="input_title" required placeholder="">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputName">Description"</label>
+        <input type="text" class="form-control" id="exampleInputName" name="input_description" required placeholder="">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputName">Deadline </label>
+        <input type="datetime-local" class="form-control" id="exampleInputName" name="input_deadline" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+

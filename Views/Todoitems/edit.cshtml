@@ -1,0 +1,28 @@
+﻿@model Item
+
+    <h1>
+  @* @ViewData["msg"]*@ 
+ 
+</h1>
+
+
+@*action="/Todoitems/Edit"*@
+
+<form id="myForm"  method="post">
+    <div class="form-group">
+        <label for="exampleInputName">patient name</label>
+        <input type="text" class="form-control" value="@Model.Title" id="exampleInputName" asp-for="Title"  required placeholder="">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputName">Appointment Date</label>
+        <input type="text" class="form-control" value="@Model.Description" id="exampleInputName" asp-for="Description"  required placeholder="">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputName">Appointment time </label>
+        <input type="datetime-local" class="form-control" value="@Model.Deadline" id="exampleInputName" asp-for="Deadline"  required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+

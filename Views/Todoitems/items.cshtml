@@ -1,0 +1,48 @@
+﻿@model List<Item>
+@*<button href="/Todoitems/createnew" class="btn btn-primary">create new</button>*@
+<a href="/Todoitems/createnew" "> create new</a>
+
+<h1> welcome.@ViewData["user"]</h1>
+<table class="table">
+    <thead>
+        <tr>
+           
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Deadline</th>
+         
+            <th scope="col">action
+                </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Item item in Model)
+        {
+
+            <tr>
+            
+                <td>@item.Title</td>
+                <td>  @item.Description</td>
+                <td>  @item.Deadline</td>
+             
+
+            <td>  <a href="/Todoitems/edit?id=@item.Id">Edit</a> | <a href="/Todoitems/delete?id=@item.Id">delete</a></td>
+         </tr>
+
+
+        }
+        @* @foreach (var item in (List<string> )  ViewData["newnote"])
+        {
+
+        <tr>
+        <th scope="row">@item</th>
+
+
+        </tr>
+
+
+        }*@
+
+
+    </tbody>
+</table>
